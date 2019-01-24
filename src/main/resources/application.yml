@@ -1,0 +1,15 @@
+server:
+  port: 9094
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.vincce.shop.pojo
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lgyjl_shop?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+

@@ -5,6 +5,7 @@ import org.apache.ibatis.type.Alias;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * Created By BaoNing On 2019/1/24
@@ -25,7 +26,7 @@ public class PurchaseRecordPo implements Serializable {
 
     private Double sum;
 
-    private Timestamp purchaseTime;
+    private Date purchaseDate;
 
     private String note;
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincce.shop.mapper.ProductMapper">
+
+    <!--获取产品-->
+    <select id="getProduct" parameterType="long" resultType="product">
+        SELECT
+          id, product_name AS productName, stock, price, version, note
+        FROM t_product
+        WHERE id = #{id}
+    </select>
+
+    <!--减库存-->
+    <update id="decreaseProduct">
+        UPDATE
+          t_product
+        SET stock = stock - #{quantity}
+        WHERE id = #{id}
+    </update>
+
+
+
+</mapper>
