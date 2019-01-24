@@ -23,7 +23,7 @@ public interface ProductMapper {
      * @param quantity
      * @return
      */
-    Integer decreaseProduct(@Param("id") Long id, @Param("quantity") Integer quantity);
+    Integer decreaseProduct(@Param("id") Long id, @Param("quantity") Integer quantity, @Param("version") Integer version);
 
 
 }

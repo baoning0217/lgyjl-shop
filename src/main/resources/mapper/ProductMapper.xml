@@ -14,8 +14,9 @@
     <update id="decreaseProduct">
         UPDATE
           t_product
-        SET stock = stock - #{quantity}
-        WHERE id = #{id}
+        SET stock = stock - #{quantity},
+        version = version + 1
+        WHERE id = #{id} AND version = #{version}
     </update>
 
 
