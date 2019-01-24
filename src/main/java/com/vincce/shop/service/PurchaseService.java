@@ -5,6 +5,7 @@ import com.vincce.shop.mapper.PurchaseRecordMapper;
 import com.vincce.shop.pojo.ProductPo;
 import com.vincce.shop.pojo.PurchaseRecordPo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,9 @@ public class PurchaseService {
 
     @Autowired
     private ProductMapper productMapper;
+
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
 
     /**
      * 处理购买业务
